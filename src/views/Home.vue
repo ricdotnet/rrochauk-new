@@ -1,13 +1,18 @@
 <template>
-$END$
+	<div>
+		<Header />
+		<Info />
+	</div>
 </template>
 
 <script>
+import Info from "../components/Info";
+import Header from "../components/Header";
 export default {
-name: "Home"
+	name: "Home",
+	components: {Header, Info},
+	props: {
+		msg: String
+	}
 }
 </script>
-
-<style scoped>
-
-</style>

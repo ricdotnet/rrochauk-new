@@ -1,28 +1,33 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div id="app">
+		<SpinnerIcon v-show="this.$store.loading" class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2" />
+		<Home v-show="!this.$store.loading" msg="hey hey" />
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Home from "./views/Home";
+import SpinnerIcon from "./components/icons/SpinnerIcon";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	name: 'App',
+	components: {
+		SpinnerIcon,
+		Home,
+	},
+	data() {
+		return {
+
+		}
+	},
+	created() {
+		this.$store.loading = true
+
+		this.$store.setTheme()
+
+		setTimeout(() => {
+			this.$store.loading = false;
+		}, 2000)
+	}
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
