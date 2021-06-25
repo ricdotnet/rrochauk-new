@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<div class="cursor-pointer" @click="themeSelect">
-			<MoonIcon v-show="this.showIcon" />
-			<SunIcon v-show="!this.showIcon"/>
+			<MoonIcon v-show="this.$store.currentTheme === 'light'" />
+			<SunIcon v-show="this.$store.currentTheme === 'dark'"/>
 		</div>
 	</div>
 </template>
@@ -15,7 +15,7 @@ export default {
 	components: {SunIcon, MoonIcon},
 	data() {
 		return {
-			showIcon: false
+
 		}
 	},
 	methods: {

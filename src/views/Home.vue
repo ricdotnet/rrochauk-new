@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="h-screen" :class="{ 'bg-light' : this.$store.currentTheme === 'light', 'bg-dark' : this.$store.currentTheme === 'dark' }">
 		<Header />
 		<Info />
 	</div>
@@ -10,9 +10,6 @@ import Info from "../components/Info";
 import Header from "../components/Header";
 export default {
 	name: "Home",
-	components: {Header, Info},
-	props: {
-		msg: String
-	}
+	components: {Header, Info}
 }
 </script>

@@ -23,7 +23,8 @@ export default {
 	created() {
 		this.$store.loading = true
 
-		this.$store.setTheme()
+		this.$store.getTheme()
+		console.log(this.$store.currentTheme)
 
 		setTimeout(() => {
 			this.$store.loading = false;

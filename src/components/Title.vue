@@ -1,13 +1,17 @@
 <template>
 	<div>
-		{{ logo }}{{ name }}
+		{{ logo }}
+		<div class="font-medium text-2xl">{{ name }}</div>
 	</div>
 </template>
 
 <script>
 export default {
 	name: "Title",
-	props: ['name', 'logo'],
+	props: {
+		logo: String,
+		name: String,
+	},
 	data() {
 		return {
 
