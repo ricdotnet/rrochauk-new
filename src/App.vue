@@ -24,11 +24,10 @@ export default {
 		this.$store.loading = true
 
 		this.$store.getTheme()
-		console.log(this.$store.currentTheme)
 
 		setTimeout(() => {
 			this.$store.loading = false;
-		}, 2000)
+		}, 1000)
 	}
 }
 </script>

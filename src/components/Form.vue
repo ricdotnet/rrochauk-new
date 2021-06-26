@@ -1,9 +1,9 @@
 <template>
 	<div class="w-full">
 		<form @submit.prevent="" @submit="this.send">
-			<Input @input="setName" name="name" placeholder="Name" description="First and last names." class="mb-2 border-b-2" />
-			<Input @input="setEmail" name="email" placeholder="Email" description="Your email address." class="mb-2 border-b-2" />
-			<TextArea @input="setMessage" name="message" placeholder="Message" description="Your message here." rows="3" class="mb-2 border-b-2" />
+			<Input @input="setName" name="name" placeholder="Name" description="First and last names." class="mb-2" />
+			<Input @input="setEmail" name="email" placeholder="Email" description="Your email address." class="mb-2" />
+			<TextArea @input="setMessage" name="message" placeholder="Message" description="Your message here." rows="3" class="mb-2" />
 			<Button text="Send" />
 		</form>
 	</div>
