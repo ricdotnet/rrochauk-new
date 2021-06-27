@@ -1,8 +1,12 @@
 <template>
 	<div>
-		<div class="cursor-pointer" @click="themeSelect">
-			<MoonIcon v-show="this.$store.currentTheme === 'light'" />
-			<SunIcon v-show="this.$store.currentTheme === 'dark'"/>
+		<div class="cursor-pointer flex-row" @click="themeSelect">
+			<transition name="fade">
+				<MoonIcon v-show="this.$store.currentTheme === 'light'" />
+			</transition>
+			<transition name="fade">
+				<SunIcon v-show="this.$store.currentTheme === 'dark'"/>
+			</transition>
 		</div>
 	</div>
 </template>

@@ -30,7 +30,7 @@ function getTheme() {
 function setTheme() {
     let theme = localStorage.getItem('theme')
 
-    if(theme === 'light') {
+    if (theme === 'light') {
         localStorage.setItem('theme', 'dark')
         Store.currentTheme = 'dark'
     } else {

@@ -1,5 +1,5 @@
 <template>
-	<div class="h-screen" :class="{ 'bg-light' : this.$store.currentTheme === 'light', 'bg-dark' : this.$store.currentTheme === 'dark' }">
+	<div class="h-screen transition duration-300" :class="{ 'bg-light' : this.$store.currentTheme === 'light', 'bg-dark' : this.$store.currentTheme === 'dark' }">
 		<Header />
 		<Info />
 
