@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
-		<SpinnerIcon v-show="this.$store.loading" class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2" />
-		<Home v-show="!this.$store.loading" msg="hey hey" />
+		<SpinnerIcon v-show="this.$store.pageLoading" class="absolute w-28 top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2" />
+		<Home v-show="!this.$store.pageLoading" />
 	</div>
 </template>
 
@@ -21,12 +21,13 @@ export default {
 		}
 	},
 	created() {
-		this.$store.loading = true
+		this.$store.pageLoading = true
 
 		this.$store.getTheme()
+		document.title = 'Ricardo Rocha - Full Stack Developer'
 
 		setTimeout(() => {
-			this.$store.loading = false;
+			this.$store.pageLoading = false;
 		}, 1000)
 	}
 }
