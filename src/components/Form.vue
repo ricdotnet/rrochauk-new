@@ -14,7 +14,7 @@ import Input from "./Input";
 import TextArea from "./TextArea";
 import Button from "./Button";
 import axios from 'axios'
-import https from 'https'
+import http from 'http'
 
 export default {
 	name: "Form",
@@ -40,7 +40,7 @@ export default {
 			}
 
 			let body = this.message
-			let agent = new https.Agent({
+			let agent = new http.Agent({
 				rejectUnauthorized: false
 			})
 			axios.post(`${process.env.VUE_APP_API_URL}/mail`, body, {
