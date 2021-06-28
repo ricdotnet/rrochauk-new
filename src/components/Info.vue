@@ -1,7 +1,7 @@
 <template>
 	<div class="w-3/4 md:w-2/4 lg:w-1/3 h-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-		<div class="w-full text-center mb-5" :class="{ 'text-white' : this.$store.currentTheme === 'dark' }">
-			<div class="text-lg font-medium">Hi, I'm Ricardo.</div>
+		<div class="w-full text-center mb-5">
+			<div class="text-lg font-medium">Hi, I'm Ricardo, a web and software developer from Portugal.</div>
 			<div class="mb-10 text-lg font-medium">Visit my website in <a href="https://ricr.dev" target="_blank" class="font-bold" :style="{color: linkColor}">ricR.dev</a></div>
 			<div>You can also get in touch using the form below.</div>
 		</div>
