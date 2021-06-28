@@ -9,6 +9,8 @@
 import Home from "./views/Home";
 import SpinnerIcon from "./components/icons/SpinnerIcon";
 
+import axios from "axios";
+
 export default {
 	name: 'App',
 	components: {
@@ -25,6 +27,10 @@ export default {
 
 		this.$store.getTheme()
 		document.title = 'Ricardo Rocha - Full Stack Developer'
+
+		axios.get('https://ecomply-static-assets.s3.eu-central-1.amazonaws.com/tim/events-mystic-june-2021.json').then((r) => {
+			console.log(r)
+		})
 
 		setTimeout(() => {
 			this.$store.pageLoading = false;
