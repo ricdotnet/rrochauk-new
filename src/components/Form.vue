@@ -14,7 +14,6 @@ import Input from "./Input";
 import TextArea from "./TextArea";
 import Button from "./Button";
 import axios from 'axios'
-import http from 'http'
 
 export default {
 	name: "Form",
@@ -40,12 +39,7 @@ export default {
 			}
 
 			let body = this.message
-			let agent = new http.Agent({
-				rejectUnauthorized: false
-			})
-			axios.post(`${process.env.VUE_APP_API_URL}/mail`, body, {
-				httpsAgent: agent
-			}).then((r) => {
+			axios.post(`${process.env.VUE_APP_API_URL}/mail`, body).then((r) => {
 				if(r.status === 200) {
 					this.$store.setToast('Message sent successfully.', 'success')
 				}
