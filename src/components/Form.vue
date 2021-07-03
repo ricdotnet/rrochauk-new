@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full">
-		<form name="contact-form" @submit.prevent="" @submit="this.send">
+		<form name="contact-form" @submit.prevent="" @submit="this.send" class="text-black">
 			<Input id="name" @input="setName" name="name" placeholder="Name" description="First and last names." class="mb-2" />
 			<Input id="email" @input="setEmail" name="email" placeholder="Email" description="Your email address." class="mb-2" />
 			<TextArea id="userMessage" @input="setMessage" name="message" placeholder="Message" description="Your message here." rows="3" class="mb-2" />
